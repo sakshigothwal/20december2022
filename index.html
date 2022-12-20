@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            //I can write js code Before the closing of head tag
+        </script>
+    </head>
+    <body>
+        <div class="myclass">
+            <span>Hello</span>
+        </div>
+        <form>
+            <input type="text" onkeyup="myfont1(this)">
+            <input type="text" onkeyup="myfont2(this)">
+            <input type="checkbox">
+        
+        <select onchange="myfont4(this)">
+            <option>Male</option>
+            <option>Female</option>
+            <option>other</option>
+        </select>
+        <textarea onkeyup="myfont3(this)"></textarea>
+        </form>
+        <script>
+            //I can write JS code before the closing body tag
+            
+            //Lets access the DOM element
+            // full form of DOM = "Document object model"
+            // object.method()
+            // document.getElementById();
+            // document.querySelector();
+
+            // element = tag
+
+            let e1 = document.querySelector('div.myclass'); //Assosiativity of the operator R TO L
+            console.log(e1.inerHTML);
+            console.log(e1.innerText);
+
+            //1.function defination
+            function myfont1(x){      //x is a formal argument 
+                console.log(x.value);   
+            }
+
+            //function defination
+            function myfont2(y){        //y is a formal argument
+                console.log(y.value);   //element.value
+            }
+
+            //function defination
+            function myfont3(z){        //z is a formal argument
+                console.log(z.value);   //element.value
+            }  
+
+             //function defination
+             function myfont4(a){      //a is a formal argument
+                console.log(a.value);  //element.value 
+             }
+
+             let student1 = {
+                //1. Property:Value
+                name:"sakshi",
+                surname:"gothwal",
+
+                //2. Method/Function
+                getName(){ 
+                    console.log(this.name)
+
+                    //object.method()
+
+                    this.getSurname(); // I am calling the function internally
+                },
+                getSurname(){
+                    console.log(this.surname)
+                }
+            }; //JS Object
+
+            student1.getName();
+
+            //student1.getSurname();  
+            //object.method()
+
+        </script>
+     </body>
+    </html>
